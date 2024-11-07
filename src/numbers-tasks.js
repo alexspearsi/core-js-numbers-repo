@@ -268,8 +268,11 @@ function getCube(num) {
  *   3  => 2
  *   10 => 55
  */
-function getFibonacciNumber(/* index */) {
-  throw new Error('Not implemented');
+function getFibonacciNumber(num) {
+  if (num <= 1) {
+    return num;
+  }
+  return getFibonacciNumber(num - 1) + getFibonacciNumber(num - 2);
 }
 
 /**
